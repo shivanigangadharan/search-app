@@ -9,7 +9,7 @@ const initialState = {
     brand: [],
     price: [],
     rating: [],
-    clear: false
+    showTrends: false
 }
 
 export const ProductsProvider = ({ children }) => {
