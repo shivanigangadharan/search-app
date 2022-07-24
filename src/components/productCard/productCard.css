@@ -1,0 +1,35 @@
+.product-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+.heart-icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: red;
+}
+.product-image{
+    width: 150px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    align-self: center;
+}
+.product-title{
+    font-weight: 500;
+}
+.old-price{
+    color: grey;
+    text-decoration: line-through;
+}
+.new-price{
+    color: dodgerblue;
+    font-weight: 500;
+}
+.fa-star{
+    color: gold;
+}

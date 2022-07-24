@@ -6,7 +6,7 @@ import ProductListing from './pages/ProductListing/ProductListing';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route element={<LandingPage />} path="/" />
