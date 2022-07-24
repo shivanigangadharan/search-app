@@ -1,3 +1,9 @@
 .App{
     font-family: 'Inter', sans-serif;
 }
+.gold-star{
+    color: gold;
+}
+.grey-star{
+    color: lightgrey;
+}
