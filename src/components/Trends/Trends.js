@@ -16,10 +16,10 @@ export default function Trends() {
             <div className="trends-flex">
                 {
                     suggestions.map((prod, i) => {
-                        if (i <= 4) {
+                        if (i >= suggestions.length - 5) {
                             return <div>
                                 <img className="trends-image" src={prod.image} />
-                                {prod.title}
+                                <div>  {prod.title}</div>
                             </div>
                         }
                     })
@@ -29,7 +29,7 @@ export default function Trends() {
             <div className="suggestions">
                 {
                     suggestions.map((prod, i) => {
-                        if (i <= 4) {
+                        if (i >= suggestions.length - 5) {
                             return <div>
                                 {prod.title}
                             </div>
