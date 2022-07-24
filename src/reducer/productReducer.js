@@ -21,6 +21,9 @@ export const productReducer = (state, action) => {
             const filteredRates = state.rating.filter((r) => r !== action.payload)
             return { ...state, rating: filteredRates }
 
+        case "FILTER_BY_SEARCH":
+            return { ...state, searched: action.payload }
+
         case "SHOW_TRENDS":
             return { ...state, showTrends: true }
     }

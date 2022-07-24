@@ -21,3 +21,9 @@ export const rateFilter = (products, rating) => {
         rating.includes(Math.floor(prod.rating.rate).toString())
     )
 }
+
+export const searchFilter = (products, text) => {
+    if (text == null || text === "") { return products }
+    return products.filter((prod) => prod.title.toLocaleLowerCase().startsWith(text.toLocaleLowerCase()));
+
+}

@@ -9,12 +9,22 @@ const initialState = {
     brand: [],
     price: [],
     rating: [],
+    searched: null,
     showTrends: false
 }
 
 export const ProductsProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(productReducer, initialState);
+
+    useEffect(() => {
+        const res = fetch("data.json")
+            .then(res => res.json())
+            .then(json => {
+                dispatch({ type: "INIT_PRODUCTS", payload: json.products })
+            }
+            )
+    }, [])
 
     return (
         <ProductsContext.Provider value={{ state, dispatch }}>
