@@ -54,7 +54,7 @@ export default function Search() {
 
                 <div className="search-results">
                     {searchResults.map((res) => {
-                        return <div className="result" onClick={(e) => handleClick(res.title)}>  {res.title}  </div>
+                        return <div key={res.id} className="result" onClick={(e) => handleClick(res.title)}>  {res.title}  </div>
                     })}
                 </div>
             }

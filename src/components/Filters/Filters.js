@@ -7,7 +7,6 @@ export default function Filters() {
     const { dispatch } = useProductsContext();
 
     const handleCheck = (filterType, target) => {
-        console.log(filterType, target.value, target.checked)
         if (target.checked) {
             dispatch({ type: `ADD_FILTER_BY_${filterType}`, payload: target.value })
         } else {
