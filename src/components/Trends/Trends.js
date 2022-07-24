@@ -17,8 +17,8 @@ export default function Trends() {
                 {
                     suggestions.map((prod, i) => {
                         if (i >= suggestions.length - 5) {
-                            return <div>
-                                <img className="trends-image" src={prod.image} />
+                            return <div key={prod.id}>
+                                <img className="trends-image" src={prod.image} alt={prod.title} />
                                 <div>  {prod.title}</div>
                             </div>
                         }
@@ -30,7 +30,7 @@ export default function Trends() {
                 {
                     suggestions.map((prod, i) => {
                         if (i >= suggestions.length - 5) {
-                            return <div>
+                            return <div key={prod.id}>
                                 {prod.title}
                             </div>
                         }

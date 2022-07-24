@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ProductCard from '../../components/productCard/productCard';
 import './productListing.css';
 import Filters from '../../components/Filters/Filters';
@@ -7,7 +7,7 @@ import { useProductsContext } from '../../context/productsContext';
 import { brandFilter, priceFilter, rateFilter, searchFilter } from '../../services/filterFunctions';
 
 export default function ProductListing() {
-    const { state, dispatch } = useProductsContext();
+    const { state } = useProductsContext();
 
     const filteredByBrand = brandFilter(state.products, state.brand);
     const filteredByPrice = priceFilter(filteredByBrand, state.price);
@@ -22,7 +22,7 @@ export default function ProductListing() {
                 <div className="products-grid">
                     {
                         filteredBySearch.map((prod) => {
-                            return <ProductCard product={prod} />
+                            return <ProductCard product={prod} key={prod.id} />
                         })
                     }
                 </div>

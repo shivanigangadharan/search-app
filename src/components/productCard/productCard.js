@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
         <div className="product-card-container">
             <div className="product-image" style={{ 'backgroundImage': `url(${image})` }}>
                 <div onClick={() => { setInWishlist(!inWishlist) }} className="heart-icon">
-                    {inWishlist ? <i class="fa-solid fa-heart"></i> : <i class="fa-regular fa-heart"></i>}
+                    {inWishlist ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                 </div>
                 <div className="view-product">
                     View Product
@@ -22,8 +22,8 @@ export default function ProductCard({ product }) {
             <div>
                 {
                     [...Array(Math.floor(rating.rate)).keys()]
-                        .map((e) => {
-                            return <span> <i className="fa-solid fa-star gold-star"></i> </span>
+                        .map((e, index) => {
+                            return <span key={index}> <i className="fa-solid fa-star gold-star"></i> </span>
                         })
                 }
                 ({rating.count})
