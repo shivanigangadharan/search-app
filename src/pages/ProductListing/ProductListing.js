@@ -16,7 +16,7 @@ export default function ProductListing() {
 
     return (
         <div className="product-listing-container">
-            <Search />
+            <div className="search-component"><Search /> </div>
             <div className="product-listing-content">
                 <Filters />
                 <div className="products-grid">

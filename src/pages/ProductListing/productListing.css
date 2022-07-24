@@ -1,8 +1,13 @@
 .product-listing-container{
     padding: 2.25rem;
 }
+.search-component{
+    display: flex;
+    justify-content: center;
+}
 .product-listing-content{
     display: flex;
+    margin: 2rem;
 }
 .products-grid{
     width: fit-content;

@@ -40,6 +40,11 @@ export default function Search() {
         navigate("/productlisting");
     }
 
+    const handleClick = (text) => {
+        dispatch({ type: "FILTER_BY_SEARCH", payload: text });
+        navigate("/productlisting");
+    }
+
     return (
         <div>
             <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
@@ -49,7 +54,7 @@ export default function Search() {
 
                 <div className="search-results">
                     {searchResults.map((res) => {
-                        return <div className="result">  {res.title}  </div>
+                        return <div className="result" onClick={(e) => handleClick(res.title)}>  {res.title}  </div>
                     })}
                 </div>
             }
