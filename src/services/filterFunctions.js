@@ -5,7 +5,6 @@ export const brandFilter = (products, brands) => {
 
 export const priceFilter = (products, price) => {
     if (price.length === 0) { return products }
-    console.log("filtering")
     let productsInRange = [];
     products.map((prod) => {
         const newPrice = prod.price - 0.1 * prod.price
@@ -13,6 +12,12 @@ export const priceFilter = (products, price) => {
             price.some((p) => newPrice >= (p - 1000) && newPrice <= p)
         ) { productsInRange.push(prod) }
     })
-    console.log('pds ', productsInRange, price)
     return productsInRange;
+}
+
+export const rateFilter = (products, rating) => {
+    if (rating.length === 0) { return products }
+    return products.filter((prod) =>
+        rating.includes(Math.floor(prod.rating.rate).toString())
+    )
 }

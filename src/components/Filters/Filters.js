@@ -49,7 +49,7 @@ export default function Filters() {
                 <div className="filter-section">
                     <span className="filter-title">  RATINGS </span>
                     <div>
-                        <input className="checkbox" type="checkbox" id="5star" />
+                        <input onClick={(e) => handleCheck("RATING", e.target)} value='5' className="checkbox" type="checkbox" id="5star" />
                         <label htmlFor="5star">
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
@@ -59,7 +59,7 @@ export default function Filters() {
                         </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="4star" />
+                        <input onClick={(e) => handleCheck("RATING", e.target)} value='4' className="checkbox" type="checkbox" id="4star" />
                         <label htmlFor="4star">
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
@@ -68,7 +68,7 @@ export default function Filters() {
                         </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="3star" />
+                        <input onClick={(e) => handleCheck("RATING", e.target)} value='3' className="checkbox" type="checkbox" id="3star" />
                         <label htmlFor="3star">
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
@@ -77,7 +77,7 @@ export default function Filters() {
                         </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="2star" />
+                        <input onClick={(e) => handleCheck("RATING", e.target)} value='2' className="checkbox" type="checkbox" id="2star" />
                         <label htmlFor="2star">
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
@@ -86,7 +86,7 @@ export default function Filters() {
                         </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="1star" />
+                        <input onClick={(e) => handleCheck("RATING", e.target)} value='1' className="checkbox" type="checkbox" id="1star" />
                         <label htmlFor="1star">
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
