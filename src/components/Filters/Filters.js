@@ -1,18 +1,31 @@
 import React from 'react';
 import './filters.css';
+import { useProductsContext } from '../../context/productsContext';
 
 export default function Filters() {
+
+    const { dispatch } = useProductsContext();
+
+    const handleCheck = (filterType, target) => {
+        console.log(filterType, target.value, target.checked)
+        if (target.checked) {
+            dispatch({ type: `ADD_FILTER_BY_${filterType}`, payload: target.value })
+        } else {
+            dispatch({ type: `REMOVE_FILTER_BY_${filterType}`, payload: target.value })
+        }
+    }
+
     return (
         <div className="filters-container">
             <form className="form">
                 <div className="filter-section">
                     <span className="filter-title"> BRAND </span>
                     <div>
-                        <input className="checkbox" type="checkbox" id="Mango" />
+                        <input onClick={(e) => handleCheck("BRAND", e.target)} value="mango" className="checkbox" type="checkbox" id="Mango" />
                         <label htmlFor="Mango"> Mango </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="HM" />
+                        <input onClick={(e) => handleCheck("BRAND", e.target)} value='H&M' className="checkbox" type="checkbox" id="HM" />
                         <label htmlFor="HM"> H&M </label>
                     </div>
                 </div>

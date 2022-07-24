@@ -4,9 +4,13 @@ import './productListing.css';
 import Filters from '../../components/Filters/Filters';
 import Search from '../../components/Search/Search';
 import { useProductsContext } from '../../context/productsContext';
+import { brandFilter } from '../../services/filterFunctions';
 
 export default function ProductListing() {
     const { state, dispatch } = useProductsContext();
+
+    const filteredByBrand = brandFilter(state.products, state.brand);
+
     useEffect(() => {
         const res = fetch("data.json")
             .then(res => res.json())
@@ -16,6 +20,7 @@ export default function ProductListing() {
             }
             )
     }, [])
+
     return (
         <div className="product-listing-container">
             <Search />
@@ -23,7 +28,7 @@ export default function ProductListing() {
                 <Filters />
                 <div className="products-grid">
                     {
-                        state.products.map((prod) => {
+                        filteredByBrand.map((prod) => {
                             return <ProductCard product={prod} />
                         })
                     }
