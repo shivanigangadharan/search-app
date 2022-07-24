@@ -5,9 +5,9 @@
     display: flex;
 }
 .products-grid{
+    width: fit-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 4rem;
 }

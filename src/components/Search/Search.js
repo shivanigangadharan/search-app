@@ -8,12 +8,12 @@ export default function Search() {
     const [searchResults, setSearchResults] = useState([]);
 
     const getData = (text) => {
-        const res = fetch('https://fakestoreapi.com/products')
+        const res = fetch('data.json')
             .then(res => res.json())
             .then(json => {
                 if (text == "") { setSearchResults([]) }
                 else {
-                    const tempDataArray = json.filter((prod) => prod.title.toLocaleLowerCase().startsWith(text.toLocaleLowerCase()));
+                    const tempDataArray = json.products.filter((prod) => prod.title.toLocaleLowerCase().startsWith(text.toLocaleLowerCase()));
                     setSearchResults(tempDataArray);
                 }
             })
