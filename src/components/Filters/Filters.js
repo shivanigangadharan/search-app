@@ -28,6 +28,14 @@ export default function Filters() {
                         <input onClick={(e) => handleCheck("BRAND", e.target)} value='H&M' className="checkbox" type="checkbox" id="HM" />
                         <label htmlFor="HM"> H&M </label>
                     </div>
+                    <div>
+                        <input onClick={(e) => handleCheck("BRAND", e.target)} value='zara' className="checkbox" type="checkbox" id="zara" />
+                        <label htmlFor="zara"> Zara </label>
+                    </div>
+                    <div>
+                        <input onClick={(e) => handleCheck("BRAND", e.target)} value='urbanic' className="checkbox" type="checkbox" id="urbanic" />
+                        <label htmlFor="urbanic"> Urbanic </label>
+                    </div>
                 </div>
 
                 <div className="filter-section">
