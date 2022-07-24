@@ -65,6 +65,7 @@ export default function Filters() {
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
+                            <i className="fa-solid fa-star grey-star"></i>
                         </label>
                     </div>
                     <div>
@@ -73,6 +74,7 @@ export default function Filters() {
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star gold-star"></i>
+                            <i className="fa-solid fa-star grey-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
                         </label>
                     </div>
@@ -83,12 +85,14 @@ export default function Filters() {
                             <i className="fa-solid fa-star gold-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
+                            <i className="fa-solid fa-star grey-star"></i>
                         </label>
                     </div>
                     <div>
                         <input onClick={(e) => handleCheck("RATING", e.target)} value='1' className="checkbox" type="checkbox" id="1star" />
                         <label htmlFor="1star">
                             <i className="fa-solid fa-star gold-star"></i>
+                            <i className="fa-solid fa-star grey-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
                             <i className="fa-solid fa-star grey-star"></i>
