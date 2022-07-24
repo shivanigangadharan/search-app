@@ -34,13 +34,14 @@ export default function Search() {
 
     return (
         <div>
-            <form onSubmit={console.log(searchText)}>
+            <form className="search-form" onSubmit={console.log(searchText)}>
                 <input className="search-bar" placeholder="Search 'Mens casual wear...'" onClick={() => dispatch({ type: "SHOW_TRENDS" })} onChange={(e) => { callDebounce(e.target.value); setSearchText(e.target.value) }} type="text" />
             </form>
-            {(searchText === null) || (searchText === "") ? <div></div> :
+            {(searchText == null) || (searchText === "") ? <div></div> :
+
                 <div className="search-results">
                     {searchResults.map((res) => {
-                        return <div>  {res.title}  </div>
+                        return <div className="result">  {res.title}  </div>
                     })}
                 </div>
             }
