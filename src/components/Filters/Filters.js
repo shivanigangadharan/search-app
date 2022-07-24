@@ -33,12 +33,16 @@ export default function Filters() {
                 <div className="filter-section">
                     <span className="filter-title"> PRICE RANGE </span>
                     <div>
-                        <input className="checkbox" type="checkbox" id="1000" />
+                        <input onClick={(e) => handleCheck("PRICE", e.target)} value='1000' className="checkbox" type="checkbox" id="1000" />
                         <label htmlFor="1000"> Under 1000 </label>
                     </div>
                     <div>
-                        <input className="checkbox" type="checkbox" id="3000" />
-                        <label htmlFor="3000"> 1000 to 3000 </label>
+                        <input onClick={(e) => handleCheck("PRICE", e.target)} value='2000' className="checkbox" type="checkbox" id="2000" />
+                        <label htmlFor="2000"> 1000 to 2000 </label>
+                    </div>
+                    <div>
+                        <input onClick={(e) => handleCheck("PRICE", e.target)} value='3000' className="checkbox" type="checkbox" id="3000" />
+                        <label htmlFor="3000"> 2000 to 3000 </label>
                     </div>
                 </div>
 
