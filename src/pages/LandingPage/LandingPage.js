@@ -9,8 +9,10 @@ export default function LandingPage() {
 
     return (
         <div className="landing-page-container">
-            <Search />
-            {state.showTrends && <Trends />}
+            <div className="landing-page-content">
+                <Search />
+                {state.showTrends && <Trends />}
+            </div>
         </div>
     )
 }
